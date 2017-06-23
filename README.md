@@ -1,2 +1,0 @@
-# sinapsis-frontend
-Sinapsis Frontend
