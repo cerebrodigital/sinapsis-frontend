@@ -1,6 +1,7 @@
 $(($)=>{
   console.log('HELLO express-vue')
-
+  $('#sliderejemplo').slick();
+  /*
   app = new Vue({
     el: '#app',
     data: {
@@ -8,5 +9,6 @@ $(($)=>{
     }
   })
   app.message = "new message"
+  */
 })
 
