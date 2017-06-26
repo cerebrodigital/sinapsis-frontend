@@ -1,11 +1,12 @@
 extends layout
 block head-scripts
-  link(src="libs/slick/slick.css")
-  link(src="libs/slick/slick-theme.css")
+  link(href='libs/slick/slick.css', rel='stylesheet')
+  link(href='libs/slick/slick-theme.css', rel='stylesheet')
+
   script(src="libs/slick/slick.min.js")
 
 block bottom-scripts
-  script(src="/js/main.js")
+  script(src="/js/landing.js")
 
 block content
   // Main jumbotron for a primary marketing message or call to action
@@ -14,26 +15,31 @@ block content
       if user
         h1 Bienvenido a Sinapsis {{user.email}}
       else
-        h1 Bienvenido a Sinapsis, recuerda registrarte 
+        h1 Bienvenido a Sinapsis, recuerda registrarte
       p
         | Esta comunidad ha comenzado el proyecto sinapsis 0.1
       p
         a.btn.btn-primary.btn-lg(href='#', role='button') Ver mas »
+
+  .row
+    .container
+      div#sliderejemplo
+          div
+            h3 1
+          div
+            h3 2
+          div
+            h3 3
+          div
+            h3 4
+          div
+            h3 5
+          div
+            h3 6
+
   .container
     // Example row of columns
-    div#sliderejemplo
-      div
-        h3 1
-      div
-        h3 2
-      div
-        h3 3
-      div
-        h3 4
-      div
-        h3 5
-      div
-        h3 6
+
     .row
       .col-md-4
         h2 Heading
