@@ -1,6 +1,6 @@
 extends ../layout
 block page-scripts
-  script(src="/js/main.js")
+  script(src="/js/login.js")
 
 block content
   .container
@@ -27,11 +27,11 @@ block content
           span.omb_spanOr or
       .row.omb_row-sm-offset-3
         .col-xs-12.col-sm-6
-          form.omb_loginForm(action='', autocomplete='off', method='POST')
+          form#conectar.omb_loginForm(action='', autocomplete='off', method='POST')
             .input-group
               span.input-group-addon
                 i.fa.fa-user
-              input.form-control(type='text', name='username', placeholder='email address')
+              input.form-control(type='email', name='email', placeholder='email address')
             span.help-block
             .input-group
               span.input-group-addon
