@@ -1,5 +1,10 @@
 extends layout
-block page-scripts
+block head-scripts
+  link(src="libs/slick/slick.css")
+  link(src="libs/slick/slick-theme.css")
+  script(src="libs/slick/slick.min.js")
+
+block bottom-scripts
   script(src="/js/main.js")
 
 block content
@@ -16,6 +21,19 @@ block content
         a.btn.btn-primary.btn-lg(href='#', role='button') Ver mas »
   .container
     // Example row of columns
+    div#sliderejemplo
+      div
+        h3 1
+      div
+        h3 2
+      div
+        h3 3
+      div
+        h3 4
+      div
+        h3 5
+      div
+        h3 6
     .row
       .col-md-4
         h2 Heading
@@ -41,4 +59,6 @@ block content
 
   #app
     |{{ (2 + 51 ) + message + " + html text + " + message + (12 - 5)}}
+
+
 

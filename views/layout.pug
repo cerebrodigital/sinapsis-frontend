@@ -6,6 +6,7 @@ html
     link(rel='stylesheet', href='/css/style.css')
     script(src="/js/libs/vue.js")
     script(src="/js/libs/jquery-3.1.1.js")
+    block head-scripts
   body
     nav.navbar.navbar-inverse.navbar-fixed-top
       .container
@@ -23,4 +24,4 @@ html
         // /.navbar-collapse
     block content
 script(src='bootstrap/js/bootstrap.min.js')
-block page-scripts
+block bottom-scripts
