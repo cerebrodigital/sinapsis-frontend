@@ -13,13 +13,14 @@ $(document).ajaxError((event, xhr, ajaxOptions, thrownError)=>{
       flash.error("Email o contraseña incorrectos")
       break
 
-    case 420:
-      console.log('420', xhr)
-      flash.error(xhr.responseText)
-
+    case 400:
+      console.log('400', xhr)
+      flash.error(xhr.responseJSON.message)
       break
 
     default:
+      console.log('default', xhr)
+      flash.error(xhr.responseJSON.message)
   }
 
 
