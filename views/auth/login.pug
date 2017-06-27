@@ -1,7 +1,9 @@
 extends ../layout
 block head-scripts
-  script(src="/js/login.js")
   link(rel='stylesheet', href='/css/login.css')
+block bottom-scripts
+  script(src="/js/login.js")
+    
 block content
   .container
     .omb_login

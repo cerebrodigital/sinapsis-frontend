@@ -1,8 +1,9 @@
 extends ../layout
-
+block head-scripts
+  link(rel='stylesheet', href='/css/login.css')
 block bottom-scripts
   script(src="/js/register.js")
-
+  
 block content
   .container
     .omb_login
@@ -26,7 +27,7 @@ block content
           span o llena el siguiente formulario:
       .row.omb_row-sm-offset-3
         .col-xs-12.col-sm-6
-          form.omb_loginForm(action='', autocomplete='off', method='POST')
+          form#register.omb_loginForm(action='', autocomplete='off', method='POST')
             .input-group
               span.input-group-addon
                 i.fa.fa-user
@@ -39,11 +40,4 @@ block content
             br
             //span.help-block Password error
             button.btn.btn-lg.btn-primary.btn-block(type='submit') Registrarse
-      .row.omb_row-sm-offset-3
-        .col-xs-12.col-sm-3
-          label.checkbox
-            input(type='checkbox', value='remember-me')
-            | Recuerdame
-        .col-xs-12.col-sm-3
-          p.omb_forgotPwd
-            a(href='#') ¿Olvidaste tu contraseña?
+
