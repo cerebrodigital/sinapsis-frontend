@@ -8,7 +8,11 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/login', function(req, res, next) {
-  res.render('auth/login', { title: 'Express' });
+  if(req.user){
+    res.redirect('/?token=')
+  }else{
+    res.render('auth/login', { title: 'Express' });
+  }
 });
 
 router.get('/register', function(req, res, next) {
