@@ -1,9 +1,11 @@
 extends layout
-block head-scripts
+block page-libs
   link(href='libs/slick/slick.css', rel='stylesheet')
   link(href='libs/slick/slick-theme.css', rel='stylesheet')
-
   script(src="libs/slick/slick.min.js")
+block head-scripts
+  link(href='/css/landing.css', rel='stylesheet')
+
 
 block bottom-scripts
   script(src="/js/landing.js")
@@ -13,7 +15,7 @@ block content
   .jumbotron
     .container
       if user
-        h1 Bienvenido a Sinapsis {{user.email}}
+        h1 Bienvenido a Sinapsis #{user.email}
       else
         h1 Bienvenido a Sinapsis, recuerda registrarte
       p

@@ -4,7 +4,7 @@ var middleware = require('../middleware')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('landing', { title: 'Express' });
+  res.render('landing', { title: 'Express' , user: req.user});
 });
 router.get('/login', function(req, res, next) {
   res.render('auth/login', { title: 'Express' });

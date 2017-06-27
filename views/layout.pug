@@ -5,10 +5,19 @@ html
     link(href='bootstrap/css/bootstrap.min.css', rel='stylesheet')
     script(src="/js/libs/vue.js")
     script(src="/js/libs/jquery-3.1.1.js")
+    script(src="/js/libs/jquery-ajax.js")
+
+    block page-libs
+
+    link(rel='stylesheet', href='/css/main.css')
     block head-scripts
-    link(rel='stylesheet', href='/css/style.css')
+  #error-api-msg-container(hidden)
+    h3#error-api-msg
+  #info-api-msg-container(hidden)
+    h3#info-api-msg
   body
-    nav.navbar.navbar-inverse.navbar-fixed-top
+
+    nav.navbar.navbar-inverse
       .container
         .navbar-header
           button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
@@ -24,4 +33,5 @@ html
         // /.navbar-collapse
     block content
 script(src='bootstrap/js/bootstrap.min.js')
+script(src="/js/libs/flash.js")
 block bottom-scripts
