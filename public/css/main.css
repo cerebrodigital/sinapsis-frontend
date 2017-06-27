@@ -13,15 +13,23 @@ a {
         margin-left: 25%;
     }
 }
+
+/* ELEMENTOS PERSONALIZADOS GLOBALES
+   USADOS EN TODA LA PLANTILLA
+*/
+.centertext {
+  text-align: center;
+}
+
+
 /*
     ESTE ESTILO ES ESPECIFICO PARA
-    LOGIN AUTH
+    LOGIN AUTH y REGISTER AUTH
 */
 .omb_login .omb_authTitle {
   text-align: center;
   line-height: 300%;
 }
-
 .omb_login .omb_socialButtons a {
   color: white; // In yourUse @body-bg
   opacity:0.9;
@@ -33,8 +41,6 @@ a {
 .omb_login .omb_socialButtons .omb_btn-facebook {background: #3b5998;}
 .omb_login .omb_socialButtons .omb_btn-twitter {background: #00aced;}
 .omb_login .omb_socialButtons .omb_btn-google {background: #c32f10;}
-
-
 .omb_login .omb_loginOr {
   position: relative;
   font-size: 1.5em;
@@ -60,14 +66,12 @@ a {
   width: 3em;
   text-align: center;
 }
-
 .omb_login .omb_loginForm .input-group.i {
   width: 2em;
 }
 .omb_login .omb_loginForm  .help-block {
     color: red;
 }
-
 
 @media (min-width: 768px) {
     .omb_login .omb_forgotPwd {
@@ -78,13 +82,11 @@ a {
 
 /*
     ESTE ESTILO ES ESPECIFICO PARA
-    REGISTER AUTH
+    SLICK Y SLIDERS
 */
-
 .slick-prev:before, .slick-next:before {
   color: black
 }
-
 
 /* api msg container
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

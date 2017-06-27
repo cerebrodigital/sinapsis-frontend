@@ -1,7 +1,7 @@
 $(($)=>{
   console.log('HELLO express-vue')
   $('#sliderejemplo').slick({
-
+    slidesToShow: 3
   });
 
   app = new Vue({
