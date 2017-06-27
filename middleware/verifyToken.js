@@ -9,8 +9,8 @@ module.exports = function(opts){
         if(err){
           return res.status(401).json({message: 'bad token'})
         }
-    	req.user = decoded
-    	next()
+      req.user = decoded
+      next()
       })
     }else{
       next()

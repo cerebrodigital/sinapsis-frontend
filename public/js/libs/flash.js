@@ -1,4 +1,3 @@
-
 $('#info-api-msg-container').on('click',(e)=>{
   $('#info-api-msg-container').fadeOut('fast')
 })

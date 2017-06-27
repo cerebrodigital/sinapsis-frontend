@@ -1,15 +1,10 @@
 $(document).ajaxError((event, xhr, ajaxOptions, thrownError)=>{
-
-  console.log('ajax error', xhr)
-  console.log(xhr.status,xhr.responseText)
   switch(xhr.status) {
     case 401:
-      console.log("in 401")
       if (window.location.pathname != '/login'){
         window.location = '/login'
         return
       }
-      console.log("after if")
       flash.error("Email o contraseña incorrectos")
       break
 
@@ -20,8 +15,8 @@ $(document).ajaxError((event, xhr, ajaxOptions, thrownError)=>{
       break
 
     default:
+      flash.error(`#{xhr.status}: #{xhr.responseText}`)
   }
-
 
 })
 

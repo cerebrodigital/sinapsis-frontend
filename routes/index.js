@@ -6,14 +6,16 @@ var middleware = require('../middleware')
 router.get('/', function(req, res, next) {
   res.render('landing', { title: 'Express' , user: req.user});
 });
+
 router.get('/login', function(req, res, next) {
   res.render('auth/login', { title: 'Express' });
 });
+
 router.get('/register', function(req, res, next) {
   res.render('auth/register', { title: 'Express' });
 });
 
-router.get('/private', middleware.loggedIn, function(req, res, next){
+router.get('/private', middleware.loggedIn(), function(req, res, next){
   res.render('private', {user: req.user})
 })
 
