@@ -12,16 +12,14 @@ block bottom-scripts
 
 block content
   // Main jumbotron for a primary marketing message or call to action
-  .jumbotron
-    .container
-      if user
-        h1 Bienvenido a Sinapsis #{user.email}
-      else
-        h1 Bienvenido a Sinapsis, recuerda registrarte
-      p
-        | Esta comunidad ha comenzado el proyecto sinapsis 0.1
-      p
-        a.btn.btn-primary.btn-lg(href='#', role='button') Ver mas »
+  if !user
+    .jumbotron
+      .container
+        h1 Proyecto Sinapsis v0.1
+          p
+            | Favor de registrarte para llevar un registro de tus actividades, acumular puntos, ganar reputación y ¡desbloquear sorpresas!
+          p
+            a.btn.btn-primary.btn-lg(href='/register', role='button') REGISTRARME AHORA »
 
   .row
     .container
@@ -60,33 +58,43 @@ block content
   .container
     // Example row of columns
     .row
-      .col-sm-6.col-md-4
+      .col-sm-6.col-md-3
         .thumbnail
           img(src='http://lorempixel.com/300/150/', alt='...')
           .caption
             h3 Titulo de la nota
             p 
-              | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+              | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
             p
               a.btn.btn-primary(href='#', role='button') Button
               a.btn.btn-default(href='#', role='button') Button
-      .col-sm-6.col-md-4
+      .col-sm-6.col-md-3
         .thumbnail
           img(src='http://lorempixel.com/300/150/', alt='...')
           .caption
             h3 Titulo de la nota
             p 
-              | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+              | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
             p
               a.btn.btn-primary(href='#', role='button') Button
               a.btn.btn-default(href='#', role='button') Button
-      .col-sm-6.col-md-4
+      .col-sm-6.col-md-3
         .thumbnail
           img(src='http://lorempixel.com/300/150/', alt='...')
           .caption
             h3 Titulo de la nota
             p 
-              | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+              | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+            p
+              a.btn.btn-primary(href='#', role='button') Button
+              a.btn.btn-default(href='#', role='button') Button
+      .col-sm-6.col-md-3
+        .thumbnail
+          img(src='http://lorempixel.com/300/150/', alt='...')
+          .caption
+            h3 Titulo de la nota
+            p 
+              | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
             p
               a.btn.btn-primary(href='#', role='button') Button
               a.btn.btn-default(href='#', role='button') Button

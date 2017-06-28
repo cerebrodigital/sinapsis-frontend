@@ -25,11 +25,13 @@ block content
                 button.btn.btn-default(type='button') Noticia
               .btn-group(role='group')
                 button.btn.btn-default(type='button') Articulo
+            br
             .input-group.col-md-10.col-md-offset-1
               input.form-control(type='text', name='title', placeholder="Titulo de el Post")
             .input-group.col-md-10.col-md-offset-1
               input.form-control(type='text', name='title', placeholder="Descripción Breve")
             .col-md-10.col-md-offset-1
+              br
               textarea#textarea.form-control(name='textarea', rows=10) default text
             .col-md-10.col-md-offset-1
               label.radio-inline(for='radios-0')
@@ -47,9 +49,28 @@ block content
                 option(value='categoria1') Categoria 1
                 option(value='categoria2') Categoria 2
                 option(value='categoria3') Categoria 3
+              br
             .input-group.col-md-10.col-md-offset-1
               input.form-control(type='text', name='tags', placeholder="biologia, naturaleza, botanica")
             .col-md-4
-              button#singlebutton.btn.btn-danger(name='singlebutton') Cancelar
+              button#singlebutton.btn.btn-danger.pull-left(name='singlebutton') Cancelar
             .col-md-6
-              button#singlebutton.btn.btn-success(name='singlebutton') ENVIAR
+              button#singlebutton.btn.btn-success.pull-right(name='singlebutton') ENVIAR
+      .col-sm-6.col-md-4
+        .panel.panel-default
+          br
+          p Asi
+          br
+          b TITULO:
+          p 
+            | Es muy importante que pongas un buen título para que tu nota genere relevancia.
+          br
+          b DESCRIPCION:
+          p 
+            | No es un campo obligatorio pero si lo pones es lo que va a describir tu nota en lugar de los primeros 200 caracteres por default del contenido.
+          b CONTENIDO:
+          p 
+            | Es donde puedes describir más a fondo tu nota, por si necesitas múltiples párrafos, o varias imágenes + videos, puedes elaborarla gracias a las herramientas que te proporcionamos. Esto también puede ser una breve descripción si no llenaste el campo de la descripción y solo quieres publicar un video.
+          b SUBIR O PONER FUENTE DEL MEDIA:
+          p 
+            | No es un campo obligatorio pero si lo pones es lo que va a describir tu nota en lugar de los primeros 200 caracteres por default del contenido.

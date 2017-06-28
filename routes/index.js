@@ -19,6 +19,10 @@ router.get('/register', function(req, res, next) {
   res.render('auth/register', { title: 'Registro' });
 });
 
+router.get('/forgot', function(req, res, next) {
+  res.render('auth/forgot', { title: 'Forgot Pass'});
+});
+
 router.get('/activation', function(req, res, next) {
   let vhash = req.query.vhash
   res.render('auth/activation', { title: 'Activacion', vhash: vhash});
@@ -26,6 +30,22 @@ router.get('/activation', function(req, res, next) {
 
 router.get('/publicar', function(req, res, next) {
   res.render('publish', { title: 'Publicar' });
+});
+
+router.get('/perfil', function(req, res, next) {
+  res.render('auth/profile', { title: 'Profile'});
+});
+
+router.get('/buscar', function(req, res, next) {
+  res.render('search', { title: 'Search'});
+});
+
+router.get('/post', function(req, res, next) {
+  res.render('post', { title: 'Post'});
+});
+
+router.get('/reglas', function(req, res, next) {
+  res.render('static/rules', { title: 'Reglas'});
 });
 
 router.get('/private', middleware.loggedIn(), function(req, res, next){
