@@ -1,19 +1,51 @@
 extends ../layout
 block head-scripts
   link(rel='stylesheet', href='/css/profile.css')
+  link(href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css', rel='stylesheet')
+  link(href='//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css', rel='stylesheet')
 block bottom-scripts
   script(src="/js/profile.js")
-block content    
-  .container.target
+block content 
+  .container.profile
     .row
-      .col-sm-10
-        h1 Yadaxim
-        button.btn.btn-success(type='button') Seguir
-        button.btn.btn-info(type='button') Enviar Mensaje
-        br
-      .col-sm-2
-        a.pull-right(href='/users')
-          img.img-circle.img-responsive(title='profile image', src='http://www.rlsandbox.com/img/profile.jpg')
+      .span12
+        .well.well-small.clearfix
+          .row-fluid
+            .span2
+              img.img-polaroid(src='http://www.gravatar.com/avatar/f6112e781842d6a2b4636b35451401ff?s=125')
+            .span4
+              h2 Jonnie Spratley
+              ul.unstyled
+                li
+                  b título: 
+                  |  El lord de la Biología
+                li
+                  b contacto:
+                  |  jonniespratley@me.com
+                li
+                  b website:
+                  |  http://jonniespratley.me
+            .span6
+              ul.inline.stats
+                li
+                  span 27
+                  |                  Level
+                li
+                  span 2,444
+                  |                  Créditos
+                li
+                  span 35,334
+                  |                  Experiencia
+                li
+                  span 186
+                  |                  Seguidores
+              div
+                span6.pull-right
+                  a.btn.btn-info(href='#', role='button') Seguir
+                  a.btn.btn-success(href='#', role='button') Mensajear
+                  a.btn.btn-danger(href='#', role='button') Reportar
+              
+  .container.target
     br
     .row
       .col-sm-3

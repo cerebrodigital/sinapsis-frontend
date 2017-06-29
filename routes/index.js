@@ -36,6 +36,10 @@ router.get('/perfil', function(req, res, next) {
   res.render('auth/profile', { title: 'Profile'});
 });
 
+router.get('/usuarios', function(req, res, next) {
+  res.render('users', { title: 'Usuarios'});
+});
+
 router.get('/buscar', function(req, res, next) {
   res.render('search', { title: 'Search'});
 });
