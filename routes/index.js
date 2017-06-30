@@ -60,4 +60,8 @@ router.get('/private', middleware.loggedIn(), function(req, res, next){
   res.render('private', {user: req.user})
 })
 
+router.get('/admin_stats', function(req, res, next) {
+  res.render('admin/stats', { title: 'Estadisticas totales' });
+});
+
 module.exports = router;
