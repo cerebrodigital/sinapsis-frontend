@@ -1,22 +1,16 @@
-$('#info-api-msg-container').on('click',(e)=>{
-  $('#info-api-msg-container').fadeOut('fast')
-})
-
-$('#error-api-msg-container').on('click',(e)=>{
-  $('#error-api-msg-container').fadeOut('fast')
-})
-
-
 window.flash={
   error: (text)=>{
     console.log(text)
-    $('#error-api-msg-container').fadeIn('fast')
-    $('#error-api-msg').text(text)
+    $('#notification-container').append($('#danger-notification-template').html()).find('.danger-message').last().text(text)
   },
   success: (text)=>{
-    $('#info-api-msg-container').fadeIn('fast')
-    $('#info-api-msg').text(text)
-
+    $('#notification-container').append($('#success-notification-template').html()).find('.success-message').last().text(text)
+  },
+  info: (text)=>{
+    $('#notification-container').append($('#info-notification-template').html()).find('.info-message').last().text(text)
+  },
+  warning: (text)=>{
+    $('#notification-container').append($('#warning-notification-template').html()).find('.warning-message').last().text(text)
   }
 
 }

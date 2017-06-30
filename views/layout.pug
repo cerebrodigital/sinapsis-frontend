@@ -10,10 +10,7 @@ html
 
     link(rel='stylesheet', href='/css/main.css')
     block head-scripts
-  #error-api-msg-container(hidden)
-    h3#error-api-msg
-  #info-api-msg-container(hidden)
-    h3#info-api-msg
+  include partials/notifications.pug    
   body
     include partials/nav.pug
     
